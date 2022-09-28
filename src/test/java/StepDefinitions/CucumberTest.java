@@ -1,4 +1,4 @@
-package project.smoketest;
+package StepDefinitions;
 
 import org.junit.runner.RunWith;
 
