@@ -21,14 +21,12 @@ public class MyAccountPage {
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement loginButton;
 
+    @FindBy(xpath = "//*[contains(text(),'Log out')]")
+    public WebElement confirmationButton;
+
     public void loginMethod(String username, String password) {
-//        Log.info("called method loginMethod");
-//        Log.info("Send keys with value" + username);
         userNameField.sendKeys(username);
         passwordField.sendKeys(password);
-//        Log.info("Send keys with value" + password);
-
         loginButton.click();
-//        Log.info("Clicked on submit button");
     }
 }

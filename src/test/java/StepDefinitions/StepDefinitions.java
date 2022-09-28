@@ -101,8 +101,8 @@ public class StepDefinitions {
 //        logo.click();
 //    }
 //
-    @When("successfully login")
-    public void user_enter_and(String username,String password)  {
+    @When("successfully login$")
+    public void user_enter_and()  {
         myAccountPage.loginMethod("customer", "customer@123");
     }
 
@@ -177,11 +177,11 @@ public class StepDefinitions {
 //        Assert.assertTrue(findElementByXPath(environment.resolve(element)).isDisplayed());
 //    }
 //
-//    @Then("^\"(.*)\" is displayed$")
-//    public void i_verify_the_element_is_displayed(String string) {
-//        Boolean found = waitUntilElementIsDisplayed(string,10);
-//        Assert.assertEquals(found,true);
-//    }
+    @Then("^confirmation button is displayed$")
+    public void i_verify_the_element_is_displayed() {
+        boolean button = myAccountPage.confirmationButton.isDisplayed();
+        Assert.assertTrue(button);
+    }
 //
 //    //AND Steps
 //

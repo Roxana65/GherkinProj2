@@ -11,7 +11,7 @@ Feature: Footer Section - Smoke Tests
 
   Scenario: My Account - Successfully login
     When successfully login
-    Then "login.confirmation" is displayed
+    Then confirmation button is displayed
 
   Scenario: Teardown
     Given the browser is closed
